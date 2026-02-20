@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_downloader_app/src/feature/settings/setting_screen_app_bar_widget.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});
@@ -11,9 +12,8 @@ class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("Setting Screen"),
-      ),
+      appBar: SettingScreenAppBarWidget(),
+      body: Center(child: Text("Setting Screen")),
     );
   }
 }
