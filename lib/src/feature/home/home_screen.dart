@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final _urlController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +24,10 @@ class _HomeScreenState extends State<HomeScreen> {
             spacing: 10.h,
             children: [
               // Url paste
-              VideoUrlWidget(),
+              VideoUrlWidget(
+                onPressed: _onTapUrlPaste,
+                controller: _urlController,
+              ),
 
               // download video.
               DownloadOptionCardWidget(
@@ -32,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: Icons.videocam_outlined,
                 onTap: _onTapVideoOption,
               ),
+
               // download Audio
               DownloadOptionCardWidget(
                 title: 'Download Audio',
@@ -46,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void _onTapPaste() {}
+  void _onTapUrlPaste() {}
   void _onTapVideoOption() {}
   void _onTapAudioOption() {}
 }
