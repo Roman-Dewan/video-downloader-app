@@ -18,5 +18,29 @@ class MyStyle {
     fontWeight: FontWeight.w500,
     color: ColorUtils.white,
   );
-  
+  static TextStyle buttonText = TextStyle(
+    color: Colors.black,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle generalText = TextStyle(
+    color: Colors.black,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle extraText = TextStyle(
+    color: Colors.grey[400],
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle homeTitle = TextStyle(
+    color: ColorUtils.black,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle homeSubtitle = TextStyle(
+    color: ColorUtils.grey,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w600,
+  );
 }

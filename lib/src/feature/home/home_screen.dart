@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:video_downloader_app/src/core/color_utils.dart';
-import 'package:video_downloader_app/src/core/my_style.dart';
+import 'package:video_downloader_app/src/feature/home/download_option_card_widget.dart';
+import 'package:video_downloader_app/src/feature/home/home_screen_app_bar.dart';
+import 'package:video_downloader_app/src/feature/home/video_url_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,53 +15,38 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                ColorUtils.red,
-                ColorUtils.red,
-                ColorUtils.pink,
-                ColorUtils.pink,
-              ],
-            ),
-          ),
-        ),
-        toolbarHeight: 100,
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Row(
-              children: [
-                Icon(
-                  Icons.file_download_outlined,
-                  color: ColorUtils.white,
-                  size: 32.sp,
-                ),
-                SizedBox(width: 10.w),
-                Text("Video Downloader", style: MyStyle.title1),
-              ],
-            ),
-            Text(
-              "Download videos and audios from YouTube",
-              style: MyStyle.title2,
-            ),
-          ],
-        ),
-      ),
+      appBar: HomeScreenAppBar(),
       body: SingleChildScrollView(
-        child: RefreshIndicator(
-          onRefresh: () async {
-            await Future.delayed(Duration(seconds: 2));
-          },
-          backgroundColor: Colors.red,
-          child: Column(children: [Text("data")]),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8.w),
+          child: Column(
+            spacing: 10.h,
+            children: [
+              // Url paste
+              VideoUrlWidget(),
+
+              // download video.
+              DownloadOptionCardWidget(
+                title: 'Download Video',
+                subTitle: 'Choose quality & format',
+                icon: Icons.videocam_outlined,
+                onTap: _onTapVideoOption,
+              ),
+              // download Audio
+              DownloadOptionCardWidget(
+                title: 'Download Audio',
+                subTitle: 'Extract Audio Only',
+                icon: Icons.arrow_forward_ios_sharp,
+                onTap: _onTapAudioOption,
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
+
+  // void _onTapPaste() {}
+  void _onTapVideoOption() {}
+  void _onTapAudioOption() {}
 }
