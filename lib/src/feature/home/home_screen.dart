@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // void _onTapPaste() {}
+  void _onTapPaste() {}
   void _onTapVideoOption() {}
   void _onTapAudioOption() {}
 }
