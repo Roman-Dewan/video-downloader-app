@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:video_downloader_app/src/core/color_utils.dart';
 import 'package:video_downloader_app/src/core/my_style.dart';
-import 'package:video_downloader_app/src/feature/downLoad/download_item_model.dart';
+import 'package:video_downloader_app/src/data/model/download_item_model.dart';
 
 class DownloadItemCardWidget extends StatelessWidget {
   final DownloadItemModel item;

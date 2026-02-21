@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:video_downloader_app/src/feature/downLoad/download_item_model.dart';
+import 'package:video_downloader_app/src/data/dummy_data/download_item_data.dart';
 import 'package:video_downloader_app/src/feature/downLoad/download_item_card_widget.dart';
 
 class VideoScreenWidget extends StatelessWidget {
@@ -7,7 +7,7 @@ class VideoScreenWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final items = DownloadItemModel.videoItems;
+    final items = DownloadItemData.videoItems;
     return ListView.builder(
       padding: const EdgeInsets.symmetric(vertical: 8),
       itemCount: items.length,
