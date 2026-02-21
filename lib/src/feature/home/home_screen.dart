@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:video_downloader_app/src/feature/home/audio_quality_bottom_sheet.dart';
 import 'package:video_downloader_app/src/feature/home/download_option_card_widget.dart';
 import 'package:video_downloader_app/src/feature/home/home_screen_app_bar.dart';
+import 'package:video_downloader_app/src/feature/home/video_quality_bottom_sheet.dart';
 import 'package:video_downloader_app/src/feature/home/video_url_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -52,6 +54,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _onTapUrlPaste() {}
-  void _onTapVideoOption() {}
-  void _onTapAudioOption() {}
+
+  void _onTapVideoOption() {
+    VideoQualityBottomSheet.show(context);
+  }
+
+  void _onTapAudioOption() {
+    AudioQualityBottomSheet.show(context);
+  }
 }

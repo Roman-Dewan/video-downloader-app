@@ -69,4 +69,29 @@ class MyStyle {
     color: ColorUtils.blue,
     fontWeight: FontWeight.w500,
   );
+
+  // Bottom sheet styles
+  static TextStyle bottomSheetTitle = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.bold,
+    color: ColorUtils.black,
+  );
+  static TextStyle bottomSheetSubtitle = TextStyle(
+    fontSize: 12.sp,
+    color: ColorUtils.grey,
+  );
+  static TextStyle qualityOptionName = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+    color: ColorUtils.black,
+  );
+  static TextStyle qualityOptionDetail = TextStyle(
+    fontSize: 12.sp,
+    color: ColorUtils.grey,
+  );
+  static TextStyle downloadButtonText = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+    color: ColorUtils.white,
+  );
 }

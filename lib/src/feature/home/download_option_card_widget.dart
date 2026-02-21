@@ -21,6 +21,7 @@ class DownloadOptionCardWidget extends StatelessWidget {
     return Card(
       color: ColorUtils.white,
       child: ListTile(
+        onTap: onTap,
         leading: Container(
           padding: EdgeInsets.all(10.sp),
           decoration: BoxDecoration(
