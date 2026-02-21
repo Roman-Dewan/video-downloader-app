@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:video_downloader_app/src/core/color_utils.dart';
 import 'package:video_downloader_app/src/core/my_style.dart';
 
 class DownloadScreenAppBarWidget extends StatelessWidget
@@ -16,10 +17,10 @@ class DownloadScreenAppBarWidget extends StatelessWidget
             begin: AlignmentGeometry.bottomLeft,
             end: AlignmentGeometry.bottomRight,
             colors: [
-              Colors.blueAccent,
-              Colors.blue,
-              Colors.lightBlue,
-              Colors.lightBlueAccent,
+              ColorUtils.blue,
+              ColorUtils.blue,
+              ColorUtils.cyan,
+              ColorUtils.cyan,
             ],
           ),
         ),

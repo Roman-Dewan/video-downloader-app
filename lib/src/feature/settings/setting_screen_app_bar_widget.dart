@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:video_downloader_app/src/core/my_style.dart';
 
-class SettingScreenAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-  const SettingScreenAppBarWidget({
-    super.key,
-  });
+class SettingScreenAppBarWidget extends StatelessWidget
+    implements PreferredSizeWidget {
+  const SettingScreenAppBarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +13,12 @@ class SettingScreenAppBarWidget extends StatelessWidget implements PreferredSize
       flexibleSpace: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            begin: AlignmentGeometry.bottomLeft,
-            end: AlignmentGeometry.bottomRight,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
-              Colors.blueAccent,
-              Colors.blue,
-              Colors.lightBlue,
-              Colors.lightBlueAccent,
+              Colors.deepPurple.shade400,
+              Colors.blue.shade400,
+              Colors.lightBlue.shade300,
             ],
           ),
         ),
@@ -29,13 +27,13 @@ class SettingScreenAppBarWidget extends StatelessWidget implements PreferredSize
         crossAxisAlignment: CrossAxisAlignment.stretch,
         spacing: 15.h,
         children: [
-          Text("Download History", style: MyStyle.title1),
-          Text("4 total downloads", style: MyStyle.title2),
+          Text("Settings", style: MyStyle.title1),
+          Text("Customize your download experience", style: MyStyle.title2),
         ],
       ),
     );
   }
-  
+
   @override
   Size get preferredSize => Size.fromHeight(100);
 }

@@ -10,7 +10,10 @@ class ColorUtils {
   static const Color cyan = Colors.cyan;
   static const Color orange = Colors.orange;
   static const Color purple = Colors.purple;
+  static const Color deepPurple = Colors.deepPurple;
   static const Color pink = Colors.pink;
   static const Color brown = Colors.brown;
   static const Color grey = Colors.grey;
+  static const Color transparent = Colors.transparent;
+  static const Color lightGrey = Color(0xFFF5F6FA);
 }
