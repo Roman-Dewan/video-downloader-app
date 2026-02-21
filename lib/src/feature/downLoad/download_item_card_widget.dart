@@ -6,8 +6,17 @@ import 'package:video_downloader_app/src/feature/downLoad/download_item_model.da
 
 class DownloadItemCardWidget extends StatelessWidget {
   final DownloadItemModel item;
+  final VoidCallback? onPause;
+  final VoidCallback? onPlay;
+  final VoidCallback? onDelete;
 
-  const DownloadItemCardWidget({super.key, required this.item});
+  const DownloadItemCardWidget({
+    super.key,
+    required this.item,
+    this.onPause,
+    this.onPlay,
+    this.onDelete,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -96,20 +105,20 @@ class DownloadItemCardWidget extends StatelessWidget {
               if (item.isDownloading) 
                 _buildActionButton(
                   icon: Icons.pause_rounded,
-                  onTap: () {},
+                  onTap: () => onPause?.call(),
                   color: ColorUtils.grey
                 ),
               if (item.isDownloading) SizedBox(height: 8.h),
               if (!item.isDownloading)
                 _buildActionButton(
                   icon: Icons.play_arrow_rounded,
-                  onTap: () {},
+                  onTap: () => onPlay?.call(),
                   color: ColorUtils.green
                 ),
               if (!item.isDownloading) SizedBox(height: 8.h),
               _buildActionButton(
                 icon: Icons.delete_outline_rounded,
-                onTap: () {},
+                onTap: () => onDelete?.call(),
                 color: ColorUtils.red
               ),
             ],

@@ -36,10 +36,11 @@ class VideoUrlWidget extends StatelessWidget {
                         hintStyle: MyStyle.extraText,
                         contentPadding: EdgeInsets.symmetric(
                           vertical: 1.h,
-                          horizontal: 8.h,
+                          horizontal: 1.h,
                         ),
                         fillColor: Colors.white24,
                         filled: true,
+                        prefixIcon: Icon(Icons.link, color: Colors.grey),
 
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8.r),

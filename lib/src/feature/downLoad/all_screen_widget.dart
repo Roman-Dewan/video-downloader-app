@@ -12,7 +12,18 @@ class AllScreenWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8),
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return DownloadItemCardWidget(item: items[index]);
+        return DownloadItemCardWidget(
+          item: items[index],
+          onPause: () {
+            debugPrint('Pause tapped for: ${items[index].title}');
+          },
+          onPlay: () {
+            debugPrint('Play tapped for: ${items[index].title}');
+          },
+          onDelete: () {
+            debugPrint('Delete tapped for: ${items[index].title}');
+          },
+        );
       },
     );
   }
